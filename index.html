@@ -1,0 +1,767 @@
+<html lang="en"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNN Visualizer Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&amp;family=Open+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+    <style>
+        /* Prevent layout shift from scrollbar appearing/disappearing */
+        html {
+            overflow-y: scroll;
+        }
+
+        /* Google Sheets UI Mimic */
+        .sheets-container {
+            position: relative;
+            background: #f8f9fa;
+            border: 1px solid #c4c7c5;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            user-select: none;
+        }
+
+        .sheet-grid {
+            display: grid;
+            grid-template-columns: 40px repeat(8, 1fr);
+            gap: 1px;
+            background-color: #e2e3e5; /* Grid lines */
+            border-bottom: 1px solid #e2e3e5;
+        }
+
+        .cell {
+            background: white;
+            padding: 4px 8px;
+            font-size: 13px;
+            color: #1f1f1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            cursor: default;
+            position: relative;
+            transition: background 0.1s;
+        }
+        
+        .cell-header {
+            background: #f8f9fa;
+            font-weight: bold;
+            color: #444746;
+            justify-content: center;
+        }
+
+        /* Interaction States */
+        .cell:hover {
+            background-color: #f0f4f8;
+        }
+
+        .cell.active {
+            outline: 2px solid #1a73e8;
+            background-color: white;
+            z-index: 10;
+        }
+
+        /* Dependency Highlights (mimicking Sheets colors) */
+        .dep-orange { border: 2px solid #e37400; z-index: 5; }
+        .dep-purple { border: 2px solid #a50e0e; z-index: 5; }
+        .dep-cyan { border: 2px solid #0b8043; z-index: 5; }
+        .dep-blue { border: 2px solid #1a73e8; z-index: 5; }
+        
+        /* SVG Overlay for Arrows */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        /* Screenshot Mode Hide */
+        .screenshot-mode .hide-on-screenshot {
+            display: none !important;
+        }
+        .screenshot-mode .sheets-container {
+            border: none;
+        }
+
+        /* Editable Cells */
+        .editable {
+            cursor: text;
+            outline: none;
+        }
+        .editable:focus {
+            background-color: #fff !important;
+            outline: 2px solid #1a73e8;
+            z-index: 10;
+        }
+        .editable:hover {
+            background-color: #fffbeb;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.sticky{position:sticky}.left-1\/2{left:50%}.top-0{top:0px}.top-4{top:1rem}.z-30{z-index:30}.z-50{z-index:50}.col-span-2{grid-column:span 2 / span 2}.col-span-8{grid-column:span 8 / span 8}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-6{margin-bottom:1.5rem}.mt-1{margin-top:0.25rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-3{height:0.75rem}.h-4{height:1rem}.h-8{height:2rem}.min-h-screen{min-height:100vh}.w-3{width:0.75rem}.w-full{width:100%}.w-px{width:1px}.max-w-6xl{max-width:72rem}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-green-700{--tw-border-opacity:1;border-color:rgb(21 128 61 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.border-yellow-600{--tw-border-opacity:1;border-color:rgb(202 138 4 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-opacity-80{--tw-bg-opacity:0.8}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-yellow-900{--tw-text-opacity:1;color:rgb(113 63 18 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.hover\:bg-green-100:hover{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}@media (min-width: 768px){.md\:flex-row{flex-direction:row}}</style></head>
+<body class="bg-gray-100 font-sans text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Header / Toolbar -->
+    <header class="bg-white shadow-md border-b border-gray-200 sticky top-0 z-30 hide-on-screenshot">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+                <h1 class="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-green-600">border_all</span>
+                    RNN Visualizer Studio
+                </h1>
+                <p class="text-xs text-gray-500 mt-1">Interactive Dependency Tracer</p>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button onclick="resetToDefaults()" class="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded text-sm font-medium shadow transition">
+                    <span class="material-symbols-outlined text-lg">refresh</span>
+                    Reset
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8 w-full space-y-6">
+        
+        <!-- Explanation for User -->
+        <section class="hide-on-screenshot bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded shadow-sm mb-6">
+            <h2 class="font-bold text-yellow-800 text-sm uppercase mb-1">How to Use This Tool</h2>
+            <p class="text-sm text-yellow-900">
+                <strong>Edit Values:</strong> Click on any <span class="bg-orange-100 px-1 rounded">orange input cell</span> or <span class="bg-yellow-100 px-1 rounded">yellow weight cell</span> to change its value. The hidden states and outputs will automatically recalculate!
+                <br><br>
+                <strong>Trace Dependencies:</strong> Click on any <span class="bg-green-100 px-1 rounded">green hidden state</span> or <span class="bg-blue-100 px-1 rounded">blue output cell</span> to visualize its dependencies. Arrows show which cells contribute to the calculation.
+                <br><br>
+                <strong>RNN Formulas:</strong> h1 = ReLU(input * Wxh[0] + h_prev1 * Whh[0,0] + h_prev2 * Whh[0,1]) | h2 = input * Wxh[1] + h_prev1 * Whh[1,0] + h_prev2 * Whh[1,1] | output = h1 * Why[0] + h2 * Why[1]
+            </p>
+        </section>
+
+        <!-- The Interactive Tool Wrapper -->
+        <section id="studio-stage" class="bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden relative">
+            
+            <!-- App Toolbar -->
+            <div class="hide-on-screenshot bg-gray-50 border-b border-gray-200 p-2 flex items-center gap-4 text-sm text-gray-600">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-lg">touch_app</span>
+                    <span>Click a green or blue cell below:</span>
+                </div>
+                <div class="h-4 w-px bg-gray-300"></div>
+                <div class="font-mono text-gray-800 flex-grow bg-white border border-gray-300 px-2 py-1 rounded h-8 flex items-center truncate" id="formula-display">Select a cell...</div>
+            </div>
+
+            <!-- The Grid -->
+            <div class="sheets-container">
+                <svg class="overlay" id="arrow-layer">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#666"></polygon>
+                    </marker>
+                </defs>
+            </svg>
+                <div class="sheet-grid" id="grid-container">
+                    
+                    <!-- Header Row -->
+                    <div class="cell cell-header"></div>
+                    <div class="cell cell-header">A</div>
+                    <div class="cell cell-header">B</div>
+                    <div class="cell cell-header">C</div>
+                    <div class="cell cell-header">D</div>
+                    <div class="cell cell-header">E</div>
+                    <div class="cell cell-header">F</div>
+                    <div class="cell cell-header">G</div>
+                    <div class="cell cell-header">H</div>
+
+                    <!-- Row 1 -->
+                    <div class="cell cell-header">1</div>
+                    <div class="cell font-bold text-gray-500">Wₓₕ</div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold text-gray-500">Wₕₕ</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold text-gray-500">Wₕᵧ</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 2 -->
+                    <div class="cell cell-header">2</div>
+                    <div class="cell bg-yellow-50 editable" id="B2" contenteditable="true" oninput="recalculate()">1</div>
+                    <div class="cell"></div>
+                    <div class="cell bg-yellow-50 editable" id="D2" contenteditable="true" oninput="recalculate()">1</div>
+                    <div class="cell bg-yellow-50 editable" id="E2" contenteditable="true" oninput="recalculate()">-1</div>
+                    <div class="cell"></div>
+                    <div class="cell bg-yellow-50 editable" id="G2" contenteditable="true" oninput="recalculate()">-1</div>
+                    <div class="cell bg-yellow-50 editable" id="H2" contenteditable="true" oninput="recalculate()">1</div>
+                    <div class="cell"></div>
+
+                    <!-- Row 3 -->
+                    <div class="cell cell-header">3</div>
+                    <div class="cell bg-yellow-50 editable" id="B3" contenteditable="true" oninput="recalculate()">2</div>
+                    <div class="cell"></div>
+                    <div class="cell bg-yellow-50 editable" id="D3" contenteditable="true" oninput="recalculate()">1</div>
+                    <div class="cell bg-yellow-50 editable" id="E3" contenteditable="true" oninput="recalculate()">1</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Spacer -->
+                    <div class="cell cell-header">4</div>
+                    <div class="cell bg-gray-100 col-span-8"></div>
+
+                    <!-- Row 5 Headers -->
+                    <div class="cell cell-header">5</div>
+                    <div class="cell font-bold border-b">Step</div>
+                    <div class="cell font-bold border-b">Input</div>
+                    <div class="cell font-bold border-b col-span-2 text-center">Hidden (h)</div>
+                    <div class="cell border-b"></div>
+                    <div class="cell font-bold border-b text-blue-800">Output</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 6 Init -->
+                    <div class="cell cell-header">6</div>
+                    <div class="cell text-gray-400">0</div>
+                    <div class="cell text-gray-400">-</div>
+                    <div class="cell text-gray-500" id="C6">0</div>
+                    <div class="cell text-gray-500" id="D6">0</div>
+                    <div class="cell"></div>
+                    <div class="cell text-gray-400">-</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 7 Step 1 -->
+                    <div class="cell cell-header">7</div>
+                    <div class="cell">1</div>
+                    <div class="cell font-bold bg-orange-50 editable" id="B7" contenteditable="true" oninput="recalculate()">3</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="C7" onclick="trace('C7')">3</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="D7" onclick="trace('D7')">6</div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold bg-blue-50 cursor-pointer hover:bg-blue-100" id="F7" onclick="trace('F7')">3</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 8 Step 2 -->
+                    <div class="cell cell-header">8</div>
+                    <div class="cell">2</div>
+                    <div class="cell font-bold bg-orange-50 editable" id="B8" contenteditable="true" oninput="recalculate()">4</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="C8" onclick="trace('C8')">1</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="D8" onclick="trace('D8')">17</div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold bg-blue-50 cursor-pointer hover:bg-blue-100" id="F8" onclick="trace('F8')">16</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 9 Step 3 -->
+                    <div class="cell cell-header">9</div>
+                    <div class="cell">3</div>
+                    <div class="cell font-bold bg-orange-50 editable" id="B9" contenteditable="true" oninput="recalculate()">5</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="C9" onclick="trace('C9')">0</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="D9" onclick="trace('D9')">28</div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold bg-blue-50 cursor-pointer hover:bg-blue-100" id="F9" onclick="trace('F9')">28</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+
+                    <!-- Row 10 Step 4 -->
+                    <div class="cell cell-header">10</div>
+                    <div class="cell">4</div>
+                    <div class="cell font-bold bg-orange-50 editable" id="B10" contenteditable="true" oninput="recalculate()">6</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="C10" onclick="trace('C10')">0</div>
+                    <div class="cell font-mono bg-green-50 cursor-pointer hover:bg-green-100" id="D10" onclick="trace('D10')">40</div>
+                    <div class="cell"></div>
+                    <div class="cell font-bold bg-blue-50 cursor-pointer hover:bg-blue-100" id="F10" onclick="trace('F10')">40</div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </div>
+            
+            <!-- Legend (Bottom) -->
+            <div class="hide-on-screenshot bg-gray-50 border-t border-gray-200 p-3 flex gap-6 text-xs text-gray-600 justify-center">
+                <div class="flex items-center gap-1">
+                    <span class="w-3 h-3 border-2 border-orange-500 bg-white block rounded-sm"></span>
+                    <span>Input</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <span class="w-3 h-3 border-2 border-green-700 bg-white block rounded-sm"></span>
+                    <span>Previous State</span>
+                </div>
+                <div class="flex items-center gap-1">
+                    <span class="w-3 h-3 border-2 border-yellow-600 bg-white block rounded-sm"></span>
+                    <span>Weights</span>
+                </div>
+            </div>
+
+            <!-- Step-by-Step Calculation Panel -->
+            <div id="calc-panel" class="hidden border-t border-gray-200 bg-gradient-to-b from-gray-50 to-white p-4">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="material-symbols-outlined text-blue-600">calculate</span>
+                    <h3 class="font-bold text-gray-800" id="calc-title">Step-by-Step Calculation</h3>
+                </div>
+                <div id="calc-content" class="font-mono text-sm space-y-2 bg-white border border-gray-200 rounded-lg p-4 shadow-inner">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Screenshot Instructions Overlay (Hidden by default) -->
+        <div id="screenshot-hint" class="hidden fixed top-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 text-white px-6 py-3 rounded-full shadow-xl z-50 flex items-center gap-3">
+            <span class="material-symbols-outlined">visibility_off</span>
+            <span>UI Hidden. Take your screenshot now!</span>
+            <button onclick="toggleScreenshotMode()" class="bg-white text-black text-xs font-bold px-3 py-1 rounded hover:bg-gray-200 uppercase">Exit</button>
+        </div>
+
+    </main>
+
+    <script>
+        // --- Helper: Get cell value as number ---
+        function getVal(cellId) {
+            const el = document.getElementById(cellId);
+            if (!el) return 0;
+            const val = parseFloat(el.textContent.trim());
+            return isNaN(val) ? 0 : val;
+        }
+
+        // --- Helper: Set cell value with formatting ---
+        function setVal(cellId, value) {
+            const el = document.getElementById(cellId);
+            if (!el) return;
+            // Round to avoid floating point display issues
+            const rounded = Math.round(value * 1000000) / 1000000;
+            el.textContent = Number.isInteger(rounded) ? rounded : rounded.toFixed(2);
+        }
+
+        // --- RNN Recalculation ---
+        // Based on Excel:
+        // h1 = ReLU(input * Wxh[0] + h_prev1 * Whh[0,0] + h_prev2 * Whh[0,1])
+        // h2 = input * Wxh[1] + h_prev1 * Whh[1,0] + h_prev2 * Whh[1,1]
+        // output = h1 * Why[0] + h2 * Why[1]
+        function recalculate() {
+            // Get weights
+            const Wxh0 = getVal('B2');  // Input weight for h1
+            const Wxh1 = getVal('B3');  // Input weight for h2
+            const Whh00 = getVal('D2'); // Hidden-to-hidden weight h1->h1
+            const Whh01 = getVal('E2'); // Hidden-to-hidden weight h2->h1
+            const Whh10 = getVal('D3'); // Hidden-to-hidden weight h1->h2
+            const Whh11 = getVal('E3'); // Hidden-to-hidden weight h2->h2
+            const Why0 = getVal('G2');  // Output weight for h1
+            const Why1 = getVal('H2');  // Output weight for h2
+
+            // Initial hidden state (row 6)
+            let h_prev1 = getVal('C6');
+            let h_prev2 = getVal('D6');
+
+            // Steps 1-4 (rows 7-10)
+            const steps = [
+                { input: 'B7', h1: 'C7', h2: 'D7', out: 'F7' },
+                { input: 'B8', h1: 'C8', h2: 'D8', out: 'F8' },
+                { input: 'B9', h1: 'C9', h2: 'D9', out: 'F9' },
+                { input: 'B10', h1: 'C10', h2: 'D10', out: 'F10' }
+            ];
+
+            steps.forEach(step => {
+                const x = getVal(step.input);
+
+                // Calculate h1 with ReLU activation
+                const h1_pre = (x * Wxh0) + (h_prev1 * Whh00) + (h_prev2 * Whh01);
+                const h1 = Math.max(0, h1_pre);  // ReLU
+
+                // Calculate h2 (no activation in Excel)
+                const h2 = (x * Wxh1) + (h_prev1 * Whh10) + (h_prev2 * Whh11);
+
+                // Calculate output
+                const y = (h1 * Why0) + (h2 * Why1);
+
+                // Update display
+                setVal(step.h1, h1);
+                setVal(step.h2, h2);
+                setVal(step.out, y);
+
+                // Update previous hidden state for next step
+                h_prev1 = h1;
+                h_prev2 = h2;
+            });
+
+            // Clear any active traces since values changed
+            clearHighlights();
+        }
+
+        // --- Step-by-Step Calculation Generator ---
+        function generateCalculation(cellId) {
+            const panel = document.getElementById('calc-panel');
+            const title = document.getElementById('calc-title');
+            const content = document.getElementById('calc-content');
+
+            // Get all current values
+            const vals = {
+                B2: getVal('B2'), B3: getVal('B3'),
+                D2: getVal('D2'), E2: getVal('E2'),
+                D3: getVal('D3'), E3: getVal('E3'),
+                G2: getVal('G2'), H2: getVal('H2'),
+                C6: getVal('C6'), D6: getVal('D6'),
+                B7: getVal('B7'), C7: getVal('C7'), D7: getVal('D7'), F7: getVal('F7'),
+                B8: getVal('B8'), C8: getVal('C8'), D8: getVal('D8'), F8: getVal('F8'),
+                B9: getVal('B9'), C9: getVal('C9'), D9: getVal('D9'), F9: getVal('F9'),
+                B10: getVal('B10'), C10: getVal('C10'), D10: getVal('D10'), F10: getVal('F10')
+            };
+
+            // Map cell to its calculation details
+            const cellInfo = {
+                'C7': { type: 'h1', step: 1, input: 'B7', hPrev1: 'C6', hPrev2: 'D6' },
+                'D7': { type: 'h2', step: 1, input: 'B7', hPrev1: 'C6', hPrev2: 'D6' },
+                'F7': { type: 'out', step: 1, h1: 'C7', h2: 'D7' },
+                'C8': { type: 'h1', step: 2, input: 'B8', hPrev1: 'C7', hPrev2: 'D7' },
+                'D8': { type: 'h2', step: 2, input: 'B8', hPrev1: 'C7', hPrev2: 'D7' },
+                'F8': { type: 'out', step: 2, h1: 'C8', h2: 'D8' },
+                'C9': { type: 'h1', step: 3, input: 'B9', hPrev1: 'C8', hPrev2: 'D8' },
+                'D9': { type: 'h2', step: 3, input: 'B9', hPrev1: 'C8', hPrev2: 'D8' },
+                'F9': { type: 'out', step: 3, h1: 'C9', h2: 'D9' },
+                'C10': { type: 'h1', step: 4, input: 'B10', hPrev1: 'C9', hPrev2: 'D9' },
+                'D10': { type: 'h2', step: 4, input: 'B10', hPrev1: 'C9', hPrev2: 'D9' },
+                'F10': { type: 'out', step: 4, h1: 'C10', h2: 'D10' }
+            };
+
+            const info = cellInfo[cellId];
+            if (!info) return;
+
+            let html = '';
+
+            if (info.type === 'h1') {
+                // Hidden state h1 calculation (with ReLU)
+                const x = vals[info.input];
+                const h1_prev = vals[info.hPrev1];
+                const h2_prev = vals[info.hPrev2];
+                const Wxh0 = vals.B2;
+                const Whh00 = vals.D2;
+                const Whh01 = vals.E2;
+
+                const term1 = x * Wxh0;
+                const term2 = h1_prev * Whh00;
+                const term3 = h2_prev * Whh01;
+                const preActivation = term1 + term2 + term3;
+                const result = Math.max(0, preActivation);
+
+                title.textContent = `Hidden State h₁ (Step ${info.step})`;
+                html = `
+                    <div class="text-gray-600 mb-2">Formula: <span class="text-blue-700">h₁ = ReLU(x × Wₓₕ[0] + h₁_prev × Wₕₕ[0,0] + h₂_prev × Wₕₕ[0,1])</span></div>
+                    <div class="border-l-4 border-blue-400 pl-3 space-y-1">
+                        <div><span class="text-gray-500">Substituting values:</span></div>
+                        <div class="pl-2">= ReLU(<span class="text-orange-600">${x}</span> × <span class="text-yellow-600">${Wxh0}</span> + <span class="text-green-600">${h1_prev}</span> × <span class="text-yellow-600">${Whh00}</span> + <span class="text-green-600">${h2_prev}</span> × <span class="text-yellow-600">${Whh01}</span>)</div>
+                        <div class="pl-2">= ReLU(<span class="text-gray-700">${term1}</span> + <span class="text-gray-700">${term2}</span> + <span class="text-gray-700">${term3}</span>)</div>
+                        <div class="pl-2">= ReLU(<span class="text-gray-700">${preActivation}</span>)</div>
+                        <div class="pl-2 font-bold text-green-700">= ${result}</div>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-500 flex gap-4">
+                        <span><span class="inline-block w-3 h-3 bg-orange-200 rounded mr-1"></span>Input</span>
+                        <span><span class="inline-block w-3 h-3 bg-yellow-200 rounded mr-1"></span>Weight</span>
+                        <span><span class="inline-block w-3 h-3 bg-green-200 rounded mr-1"></span>Previous State</span>
+                    </div>
+                `;
+            } else if (info.type === 'h2') {
+                // Hidden state h2 calculation (no activation)
+                const x = vals[info.input];
+                const h1_prev = vals[info.hPrev1];
+                const h2_prev = vals[info.hPrev2];
+                const Wxh1 = vals.B3;
+                const Whh10 = vals.D3;
+                const Whh11 = vals.E3;
+
+                const term1 = x * Wxh1;
+                const term2 = h1_prev * Whh10;
+                const term3 = h2_prev * Whh11;
+                const result = term1 + term2 + term3;
+
+                title.textContent = `Hidden State h₂ (Step ${info.step})`;
+                html = `
+                    <div class="text-gray-600 mb-2">Formula: <span class="text-blue-700">h₂ = x × Wₓₕ[1] + h₁_prev × Wₕₕ[1,0] + h₂_prev × Wₕₕ[1,1]</span></div>
+                    <div class="border-l-4 border-green-400 pl-3 space-y-1">
+                        <div><span class="text-gray-500">Substituting values:</span></div>
+                        <div class="pl-2">= <span class="text-orange-600">${x}</span> × <span class="text-yellow-600">${Wxh1}</span> + <span class="text-green-600">${h1_prev}</span> × <span class="text-yellow-600">${Whh10}</span> + <span class="text-green-600">${h2_prev}</span> × <span class="text-yellow-600">${Whh11}</span></div>
+                        <div class="pl-2">= <span class="text-gray-700">${term1}</span> + <span class="text-gray-700">${term2}</span> + <span class="text-gray-700">${term3}</span></div>
+                        <div class="pl-2 font-bold text-green-700">= ${result}</div>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-500 flex gap-4">
+                        <span><span class="inline-block w-3 h-3 bg-orange-200 rounded mr-1"></span>Input</span>
+                        <span><span class="inline-block w-3 h-3 bg-yellow-200 rounded mr-1"></span>Weight</span>
+                        <span><span class="inline-block w-3 h-3 bg-green-200 rounded mr-1"></span>Previous State</span>
+                    </div>
+                `;
+            } else if (info.type === 'out') {
+                // Output calculation
+                const h1 = vals[info.h1];
+                const h2 = vals[info.h2];
+                const Why0 = vals.G2;
+                const Why1 = vals.H2;
+
+                const term1 = h1 * Why0;
+                const term2 = h2 * Why1;
+                const result = term1 + term2;
+
+                title.textContent = `Output y (Step ${info.step})`;
+                html = `
+                    <div class="text-gray-600 mb-2">Formula: <span class="text-blue-700">y = h₁ × Wₕᵧ[0] + h₂ × Wₕᵧ[1]</span></div>
+                    <div class="border-l-4 border-blue-400 pl-3 space-y-1">
+                        <div><span class="text-gray-500">Substituting values:</span></div>
+                        <div class="pl-2">= <span class="text-green-600">${h1}</span> × <span class="text-yellow-600">${Why0}</span> + <span class="text-green-600">${h2}</span> × <span class="text-yellow-600">${Why1}</span></div>
+                        <div class="pl-2">= <span class="text-gray-700">${term1}</span> + <span class="text-gray-700">${term2}</span></div>
+                        <div class="pl-2 font-bold text-blue-700">= ${result}</div>
+                    </div>
+                    <div class="mt-3 text-xs text-gray-500 flex gap-4">
+                        <span><span class="inline-block w-3 h-3 bg-yellow-200 rounded mr-1"></span>Weight</span>
+                        <span><span class="inline-block w-3 h-3 bg-green-200 rounded mr-1"></span>Hidden State</span>
+                    </div>
+                `;
+            }
+
+            content.innerHTML = html;
+            panel.classList.remove('hidden');
+        }
+
+        // --- Dependency Logic (corrected formulas) ---
+        const dependencies = {
+            'C7': { sources: ['B7', 'B2', 'C6', 'D6', 'D2', 'E2'], formula: '=MAX(0, (B7*B2) + (C6*D2) + (D6*E2))' },
+            'D7': { sources: ['B7', 'B3', 'C6', 'D6', 'D3', 'E3'], formula: '=(B7*B3) + (C6*D3) + (D6*E3)' },
+            'F7': { sources: ['C7', 'D7', 'G2', 'H2'], formula: '=(C7*G2) + (D7*H2)' },
+            'C8': { sources: ['B8', 'B2', 'C7', 'D7', 'D2', 'E2'], formula: '=MAX(0, (B8*B2) + (C7*D2) + (D7*E2))' },
+            'D8': { sources: ['B8', 'B3', 'C7', 'D7', 'D3', 'E3'], formula: '=(B8*B3) + (C7*D3) + (D7*E3)' },
+            'F8': { sources: ['C8', 'D8', 'G2', 'H2'], formula: '=(C8*G2) + (D8*H2)' },
+            'C9': { sources: ['B9', 'B2', 'C8', 'D8', 'D2', 'E2'], formula: '=MAX(0, (B9*B2) + (C8*D2) + (D8*E2))' },
+            'D9': { sources: ['B9', 'B3', 'C8', 'D8', 'D3', 'E3'], formula: '=(B9*B3) + (C8*D3) + (D8*E3)' },
+            'F9': { sources: ['C9', 'D9', 'G2', 'H2'], formula: '=(C9*G2) + (D9*H2)' },
+            'C10': { sources: ['B10', 'B2', 'C9', 'D9', 'D2', 'E2'], formula: '=MAX(0, (B10*B2) + (C9*D2) + (D9*E2))' },
+            'D10': { sources: ['B10', 'B3', 'C9', 'D9', 'D3', 'E3'], formula: '=(B10*B3) + (C9*D3) + (D9*E3)' },
+            'F10': { sources: ['C10', 'D10', 'G2', 'H2'], formula: '=(C10*G2) + (D10*H2)' }
+        };
+
+        // Define semantic colors based on cell type
+        function getCellColor(cellId) {
+            // Inputs (orange)
+            if (['B7', 'B8', 'B9', 'B10'].includes(cellId)) {
+                return '#e37400';
+            }
+            // Weights - W_xh, W_hh, and W_hy (yellow)
+            if (['B2', 'B3', 'D2', 'E2', 'D3', 'E3', 'G2', 'H2'].includes(cellId)) {
+                return '#ca8a04';
+            }
+            // Previous states (green)
+            if (['C6', 'D6', 'C7', 'D7', 'C8', 'D8', 'C9', 'D9', 'C10', 'D10'].includes(cellId)) {
+                return '#15803d';
+            }
+            // Default color
+            return '#666';
+        }
+
+        function trace(cellId) {
+            const data = dependencies[cellId];
+            if (!data) return;
+
+            const activeEl = document.getElementById(cellId);
+
+            // Toggle off if clicking the same cell that's already active
+            if (activeEl.classList.contains('active')) {
+                clearHighlights();
+                return;
+            }
+
+            clearHighlights();
+
+            activeEl.classList.add('active');
+
+            // Generate step-by-step calculation
+            generateCalculation(cellId);
+
+            document.getElementById('formula-display').textContent = data.formula;
+
+            const svg = document.getElementById('arrow-layer');
+            const activeRect = activeEl.getBoundingClientRect();
+            const containerRect = document.querySelector('.sheets-container').getBoundingClientRect();
+
+            // Adjust coordinates to be relative to the container
+            const tx = activeRect.left + activeRect.width / 2 - containerRect.left;
+            const ty = activeRect.top + activeRect.height / 2 - containerRect.top;
+
+            data.sources.forEach((sourceId) => {
+                const sourceEl = document.getElementById(sourceId);
+                if (!sourceEl) return;
+
+                const color = getCellColor(sourceId);
+                sourceEl.style.outline = `2px solid ${color}`;
+                sourceEl.style.zIndex = '5';
+                sourceEl.classList.add('highlighted-source');
+
+                const sourceRect = sourceEl.getBoundingClientRect();
+                const sx = sourceRect.left + sourceRect.width / 2 - containerRect.left;
+                const sy = sourceRect.top + sourceRect.height / 2 - containerRect.top;
+
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                const dx = tx - sx;
+                const dy = ty - sy;
+                const cx = sx + dx * 0.5 - (dy * 0.1);
+                const cy = sy + dy * 0.5;
+
+                path.setAttribute("d", `M ${sx} ${sy} Q ${cx} ${cy} ${tx} ${ty}`);
+                path.setAttribute("stroke", color);
+                path.setAttribute("stroke-width", "2");
+                path.setAttribute("fill", "none");
+                path.setAttribute("marker-end", "url(#arrowhead)");
+                path.style.opacity = "0.6";
+                svg.appendChild(path);
+            });
+        }
+
+        function clearHighlights() {
+            document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.highlighted-source').forEach(el => {
+                el.style.outline = '';
+                el.style.zIndex = '';
+                el.classList.remove('highlighted-source');
+            });
+            const svg = document.getElementById('arrow-layer');
+            svg.innerHTML = `
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+                    </marker>
+                </defs>
+            `;
+            document.getElementById('formula-display').textContent = 'Select a cell...';
+            document.getElementById('calc-panel').classList.add('hidden');
+        }
+
+        // --- Export & UI Utilities ---
+
+        function toggleScreenshotMode() {
+            document.body.classList.toggle('screenshot-mode');
+            const hint = document.getElementById('screenshot-hint');
+            if (document.body.classList.contains('screenshot-mode')) {
+                hint.classList.remove('hidden');
+            } else {
+                hint.classList.add('hidden');
+            }
+        }
+
+        function downloadSelf() {
+            // Get the entire HTML of the current page
+            const htmlContent = document.documentElement.outerHTML;
+            
+            // Create a blob
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            
+            // Create download link
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'RNN_Visualizer_Tool.html';
+            document.body.appendChild(a);
+            a.click();
+            
+            // Cleanup
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // --- Reset to default values ---
+        function resetToDefaults() {
+            // Reset weights
+            document.getElementById('B2').textContent = '1';
+            document.getElementById('B3').textContent = '2';
+            document.getElementById('D2').textContent = '1';
+            document.getElementById('E2').textContent = '-1';
+            document.getElementById('D3').textContent = '1';
+            document.getElementById('E3').textContent = '1';
+            document.getElementById('G2').textContent = '-1';
+            document.getElementById('H2').textContent = '1';
+
+            // Reset inputs
+            document.getElementById('B7').textContent = '3';
+            document.getElementById('B8').textContent = '4';
+            document.getElementById('B9').textContent = '5';
+            document.getElementById('B10').textContent = '6';
+
+            // Recalculate and clear highlights
+            recalculate();
+        }
+
+        // --- Event Handlers ---
+
+        // Enter key to deactivate editable cells (orange/yellow)
+        document.querySelectorAll('.editable').forEach(cell => {
+            cell.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();  // Prevent newline
+                    this.blur();         // Deactivate the cell
+                }
+            });
+        });
+
+        // Click anywhere to clear trace (except on interactive cells)
+        document.addEventListener('click', function(e) {
+            const target = e.target;
+
+            // Check if clicked on an editable cell (orange/yellow)
+            if (target.classList.contains('editable')) {
+                return;  // Let normal editing behavior happen
+            }
+
+            // Check if clicked on a traceable cell (green/blue)
+            // These have onclick="trace(...)" handlers
+            const traceableCells = ['C7', 'D7', 'F7', 'C8', 'D8', 'F8', 'C9', 'D9', 'F9', 'C10', 'D10', 'F10'];
+            if (traceableCells.includes(target.id)) {
+                return;  // Let trace() handle it
+            }
+
+            // Check if we have an active trace (calc panel is visible)
+            const calcPanel = document.getElementById('calc-panel');
+            if (!calcPanel.classList.contains('hidden')) {
+                clearHighlights();
+            }
+        });
+
+        // Initialize
+        clearHighlights();
+        recalculate();
+    </script>
+
+</body></html>
