@@ -1,2 +1,9 @@
-.venv/
-*.xlsx
+# Ignore everything
+*
+
+# Allow only these files
+!.gitignore
+!index.html
+!README.md
+!LICENSE
+!rnn_visualizer_screenshot.png
