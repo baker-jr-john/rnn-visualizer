@@ -37,7 +37,3 @@ The tool demonstrates a simple RNN with:
 1. **Edit values** - Click any orange or yellow cell and type a new number, press Enter to confirm
 2. **Trace dependencies** - Click any green or blue cell to see its formula and calculation breakdown
 3. **Reset** - Click the Reset button or click the same cell again to clear the trace
-
-## License
-
-MIT
