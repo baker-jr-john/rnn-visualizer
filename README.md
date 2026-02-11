@@ -4,6 +4,8 @@ An interactive tool for understanding Recurrent Neural Network (RNN) calculation
 
 **Live Demo:** [johnbaker.io/rnn-visualizer](https://johnbaker.io/rnn-visualizer/)
 
+![RNN Visualizer Screenshot](rnn_visualizer_screenshot.png)
+
 ## Overview
 
 This tool visualizes how an RNN processes sequential data step-by-step, based on the calculations from [Can You Calculate an RNN by Hand?](https://www.byhand.ai/p/2-can-you-calculate-an-rnn-by-hand).
